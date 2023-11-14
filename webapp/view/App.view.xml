@@ -1,0 +1,20 @@
+<mvc:View
+    controllerName="walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+>
+    <Shell>
+        <!-- click button to show say hello -->
+        <App class="myAppDemoWT">
+            <pages>
+                <Page title="{i18n>homepageTitle}">
+                    <content>
+                        <mvc:XMLView viewName="walkthrough.view.HelloPanel" />
+                        <mvc:XMLView viewName="walkthrough.view.InvoiceList" />
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

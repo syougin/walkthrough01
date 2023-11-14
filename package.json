@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "@ui5/cli": "^3.7.1"
+  },
+  "name": "walkthrough",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "ui5 serve -o index.html",
+    "start": "ui5 serve -o index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
