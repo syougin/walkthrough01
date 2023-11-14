@@ -1,5 +1,5 @@
 ### walkthrough index
-[1](#helloworld)
+[1.helloworld](#helloworld)
 
 # helloworld
 html to ouput hello world
