@@ -23,7 +23,7 @@
                         }
                     }"
                 numberUnit="{view>/currency}"
-
+                numberState="{}"
             />
         </items>
     </List>
