@@ -26,7 +26,9 @@ sap.ui.define([
          const i18nModel = new ResourceModel({
             bundleName:"walkthrough.i18n.i18n"
          });
-         this.setModel(i18nModel,"i18n")
+         this.setModel(i18nModel,"i18n");
+
+         this.getRouter().initialize();
       }
    });
 });

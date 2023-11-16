@@ -16,10 +16,8 @@
             "desktop": true,
             "tablet": true,
             "phone": true
-
         }
     },
-
     "sap.ui5": {
         "rootView": {
             "viewName": "walkthrough.view.App",
@@ -29,23 +27,22 @@
         "dependencies": {
             "minUI5Version": "1.93",
             "libs": {
-                "sap.ui.core":{},
-                "sap.m":{}
+                "sap.ui.core": {},
+                "sap.m": {}
             }
-        
         },
         "models": {
-            "i18n":{
+            "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
                     "bundleName": "walkthrough.i18n.i18n",
-                    "supportedLocales": [""],
+                    "supportedLocales": [
+                        ""
+                    ],
                     "fallbackLocale": ""
-
                 }
-            
             },
-            "invoice":{
+            "invoice": {
                 "type": "sap.ui.model.json.JSONModel",
                 "uri": "Invoices.json"
             }
@@ -56,8 +53,38 @@
                     "uri": "css/style.css"
                 }
             ]
-        }
-    
-    }
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "walkthrough.view",
+                "controlId": "app",
+                "controlAggregation": "pages"
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "overview",
+                    "target": "overview"
+                },
+                {
+                    "pattern": "detail",
+                    "name": "detail",
+                    "target":"detail"
+                }
+            ],
+            "targets": {
+                "overview":{
+                    "id": "overview",
+                    "name": "Overview"
+                },
+                "detail":{
+                    "id": "detail",
+                    "name": "Detail"
+                }
 
+            }
+        }
+    }
 }

@@ -1,8 +1,7 @@
 sap.ui.define([
     'sap/ui/core/mvc/Controller',
     'sap/ui/model/json/JSONModel',
-    "../model/formatter"
-    ,
+    "../model/formatter",
     'sap/ui/model/Filter',
     'sap/ui/model/FilterOperator'
 ],  (Controller, JSONModel,formatter,Filter,FilterOperator)=> {
@@ -33,6 +32,10 @@ sap.ui.define([
             const oList = this.byId("invoiceList");
             const oBinding = oList.getBinding("items");
             oBinding.filter(aFilter);
+        },
+        onPress(){
+            const oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("detail");
         }
     });
 });

@@ -6,15 +6,9 @@
 >
     <Shell>
         <!-- click button to show say hello -->
-        <App class="myAppDemoWT">
-            <pages>
-                <Page title="{i18n>homepageTitle}">
-                    <content>
-                        <mvc:XMLView viewName="walkthrough.view.HelloPanel" />
-                        <mvc:XMLView viewName="walkthrough.view.InvoiceList" />
-                    </content>
-                </Page>
-            </pages>
-        </App>
+        <App
+            class="myAppDemoWT"
+            id="app"
+        />
     </Shell>
 </mvc:View>
