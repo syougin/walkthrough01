@@ -8,7 +8,19 @@
         class="sapUiResponsiveMargin"
         width="auto"
         items="{invoice>/Invoices}"
+        id="invoiceList"
     >
+        <!-- Add a search function -->
+        <headerToolbar>
+            <Toolbar>
+                <Title text="{i18n>invoiceListTitle}" />
+                <ToolbarSpacer />
+                <SearchField
+                    width="50%"
+                    search=".onFilterInvoices"
+                />
+            </Toolbar>
+        </headerToolbar>
         <items>
             <ObjectListItem
                 title="{invoice>Quantity} x {invoice>ProductName}"
@@ -23,16 +35,18 @@
                         }
                     }"
                 numberUnit="{view>/currency}"
-                numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success'}">
+                numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success'}"
+            >
                 <firstStatus>
+                    <!-- Status  -->
                     <ObjectStatus
                         text="{
                             path: 'invoice>Status',
                             formatter: '.formatter.statusText'
-                        }"/>
+                        }"
+                    />
                 </firstStatus>
             </ObjectListItem>
-            
         </items>
     </List>
 </mvc:View>
