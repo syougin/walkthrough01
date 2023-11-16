@@ -1,14 +1,13 @@
 {
   "devDependencies": {
-    "@ui5/cli": "^3.7.1",
-    "ui5-middleware-simpleproxy": "^3"
+    "@ui5/cli": "^3.7.1"
   },
   "name": "walkthrough",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ui5 serve -o test/mockServer.html"
+    "start": "ui5 serve -o index.html"
   },
   "keywords": [],
   "author": "",
